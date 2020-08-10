@@ -16,12 +16,14 @@ function App() {
   return (
     <div>
       <Header/>
-      <div>
-      {
-        octocats.map(octocat => {
-          return <Octocat details={octocat}/>
-        })
-      }
+      <div className="container">
+        <div className="card-grid responsive-grid responsive-margin">
+        {
+          octocats.map(octocat => {
+            return <Octocat details={octocat}/>
+          })
+        }
+        </div>
       </div>
     </div>
   )
