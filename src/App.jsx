@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import Header from './components/Header'
 import Octocat from './components/Octocat'
 
 function App() {
@@ -13,7 +14,16 @@ function App() {
   }, [])
 
   return (
-    <Octocat/>
+    <div>
+      <Header/>
+      <div>
+      {
+        octocats.map(octocat => {
+          return <Octocat details={octocat}/>
+        })
+      }
+      </div>
+    </div>
   )
 }
 
